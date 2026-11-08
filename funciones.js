@@ -71,3 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const respuesta = await fetch('https://ecokit-universitario.onrender.com/api/registrar', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nombre, email, carrera })
+});
