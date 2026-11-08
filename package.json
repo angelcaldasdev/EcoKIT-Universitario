@@ -1,9 +1,10 @@
 {
   "name": "ecokit-universitario",
   "version": "1.0.0",
-  "description": "",
-  "main": "funciones.js",
+  "description": "Web EcoKit Universitario con registro de usuarios piloto en Turso",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -35,48 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==================================
-    // SIMULADOR ECONÓMICO / CALCULADORA
-    // ==================================
-    const rangeInput = document.getElementById('cantidadKits');
-    const valorCantidad = document.getElementById('valorCantidad');
-    const resIngresos = document.getElementById('resIngresos');
-    const resCostos = document.getElementById('resCostos');
-    const resMargen = document.getElementById('resMargen');
-
-    if (rangeInput) {
-        const actualizarCalculadora = () => {
-            const cantidad = parseInt(rangeInput.value);
-            const precioVenta = 29.00;
-            const costoVariable = 19.00;
-            
-            const ingresos = cantidad * precioVenta;
-            const costos = cantidad * costoVariable;
-            const margen = ingresos - costos;
-
-            valorCantidad.textContent = `${cantidad} kits`;
-            resIngresos.textContent = `S/ ${ingresos.toLocaleString('es-PE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-            resCostos.textContent = `S/ ${costos.toLocaleString('es-PE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-            resMargen.textContent = `S/ ${margen.toLocaleString('es-PE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        };
-
-        rangeInput.addEventListener('input', actualizarCalculadora);
-        rangeInput.addEventListener('change', actualizarCalculadora);
-        actualizarCalculadora();
-    }
-
-    // ==================================
     // REGISTRO PILOTO CONECTADO A TURSO (RENDER)
     // ==================================
-    const pilotForm = document.getElementById('pilotForm');
-    const formMessage = document.getElementById('formMessage');
+    const formularioPiloto = document.getElementById('pilotForm');
+    const mensajeFormulario = document.getElementById('formMessage');
 
-    if (pilotForm) {
-        pilotForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
+    if (formularioPiloto) {
+        formularioPiloto.addEventListener('submit', async (evento) => {
+            evento.preventDefault();
+
             const nombre = document.getElementById('nombre').value;
             const email = document.getElementById('email').value;
             const carrera = document.getElementById('carrera').value;
+
+            // Mensaje de espera: Render gratis puede tardar ~50 s en "despertar"
+            mensajeFormulario.textContent = "Enviando... (la primera vez puede tardar hasta 1 minuto)";
+            mensajeFormulario.classList.remove('hidden');
 
             try {
                 const respuesta = await fetch('https://ecokit-universitario.onrender.com/api/registrar', {
@@ -86,21 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 const resultado = await respuesta.json();
+                console.log("Respuesta del servidor:", respuesta.status, resultado);
 
                 if (resultado.success) {
-                    pilotForm.reset();
-                    formMessage.textContent = "¡Registro guardado exitosamente en la base de datos de Turso!";
-                    formMessage.classList.remove('hidden');
-
-                    setTimeout(() => {
-                        formMessage.classList.add('hidden');
-                    }, 6000);
+                    formularioPiloto.reset();
+                    mensajeFormulario.textContent = "¡Registro guardado exitosamente en la base de datos!";
+                    setTimeout(() => mensajeFormulario.classList.add('hidden'), 6000);
                 } else {
-                    alert("Hubo un error al registrar en la base de datos.");
+                    mensajeFormulario.textContent = "Error: " + (resultado.message || "no se pudo registrar.");
                 }
             } catch (error) {
                 console.error("Error de conexión:", error);
-                alert("No se pudo conectar con el servidor.");
+                mensajeFormulario.textContent = "No se pudo conectar con el servidor. Revisa que la URL de Render sea correcta.";
             }
         });
     }
