@@ -16,14 +16,14 @@
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <i class="fa-solid fa-leaf"></i>
+                <div class="upn-logo-badge">UPN</div>
                 <span>EcoKit Universitario</span>
             </div>
             <nav class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#diagnostico">Diagnóstico</a>
-                <a href="#kit">El Kit</a>
-                <a href="#calculadora">Calculadora</a>
+                <a href="#inicio" class="nav-item-green">Inicio</a>
+                <a href="#diagnostico" class="nav-item-green">Diagnóstico</a>
+                <a href="#kit" class="nav-item-green">El Kit</a>
+                <a href="#calculadora" class="nav-item-green">Calculadora</a>
                 <a href="#contacto" class="btn-nav">Únete al Piloto</a>
             </nav>
             <div class="menu-toggle" id="menu-toggle">
@@ -93,75 +93,64 @@
         </div>
     </section>
 
-    <!-- Sección El Kit -->
+    <!-- Sección El Kit con Imágenes Reales de Alta Calidad -->
     <section id="kit" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>¿Qué contiene el EcoKit Universitario?</h2>
                 <p>Una solución integral diseñada para acompañar tus actividades académicas diarias.</p>
             </div>
-            <div class="grid-2">
-                <div class="kit-image-container">
-                    <div class="eco-badge-floating"><i class="fa-solid fa-qrcode"></i> Incluye Guía QR</div>
-                    <div class="mockup-box">
-                        <i class="fa-solid fa-box-open"></i>
-                        <span>EcoKit Estándar</span>
+            <div class="kit-gallery-grid">
+                <div class="kit-item-card">
+                    <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80" alt="Botella Reutilizable">
+                    <div class="kit-item-info">
+                        <h4>Botella Reutilizable (S/ 10.00)</h4>
+                        <p>Duradera, ergonómica y libre de BPA para mantenerte hidratado[cite: 8].</p>
                     </div>
                 </div>
-                <div class="kit-features">
-                    <ul class="feature-list">
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <div>
-                                <h4>Botella Reutilizable (S/ 10.00)</h4>
-                                <p>Duradera, ergonómica y libre de BPA para mantenerte hidratado sin generar plásticos de un solo uso[cite: 8].</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <div>
-                                <h4>Bolsa de Tela Ecológica (S/ 4.00)</h4>
-                                <p>Resistente y compacta, ideal para transportar tus materiales de estudio y compras cotidianas[cite: 8].</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <div>
-                                <h4>Cubiertos Reutilizables (S/ 3.00)</h4>
-                                <p>Set portátil de acero inoxidable o material sostenible para el cafetín y comedor universitario[cite: 8].</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check-circle"></i>
-                            <div>
-                                <h4>Guía Digital Interactiva (S/ 2.00)</h4>
-                                <p>Acceso mediante código QR con manuales de limpieza, hábitos de consumo responsable y segregación[cite: 3, 8].</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="price-tag-box">
-                        <div class="price-info">
-                            <span class="label">Precio Propuesto del Kit:</span>
-                            <span class="value">S/ 29.00</span>
-                        </div>
-                        <span class="margin-badge">Margen unitario: S/ 10.00[cite: 8]</span>
+                <div class="kit-item-card">
+                    <img src="https://images.unsplash.com/photo-1597484661147-92a014902187?auto=format&fit=crop&w=600&q=80" alt="Bolsa de Tela">
+                    <div class="kit-item-info">
+                        <h4>Bolsa de Tela Ecológica (S/ 4.00)</h4>
+                        <p>Resistente y compacta, ideal para transportar tus materiales[cite: 8].</p>
                     </div>
                 </div>
+                <div class="kit-item-card">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Cubiertos Reutilizables">
+                    <div class="kit-item-info">
+                        <h4>Cubiertos Reutilizables (S/ 3.00)</h4>
+                        <p>Set portátil de acero inoxidable para el comedor universitario[cite: 8].</p>
+                    </div>
+                </div>
+                <div class="kit-item-card">
+                    <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=600&q=80" alt="Guía Digital QR">
+                    <div class="kit-item-info">
+                        <h4>Guía Digital Interactiva (S/ 2.00)</h4>
+                        <p>Acceso mediante código QR con manuales y consejos de segregación[cite: 3, 8].</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price-tag-box-centered">
+                <div class="price-info">
+                    <span class="label">Precio Propuesto del Kit:</span>
+                    <span class="value">S/ 29.00</span>
+                </div>
+                <span class="margin-badge">Margen unitario: S/ 10.00[cite: 8]</span>
             </div>
         </div>
     </section>
 
-    <!-- Sección Calculadora / Simulador Económico Interactivo -->
+    <!-- Sección Calculadora / Simulador Económico Interactivo en Tiempo Real -->
     <section id="calculadora" class="section bg-light">
         <div class="container">
             <div class="section-title">
                 <h2>Simulador de Impacto y Viabilidad</h2>
-                <p>Calcula los ingresos y costos estimados según las proyecciones de venta del kit piloto.</p>
+                <p>Mueve la barra para calcular en tiempo real los ingresos y costos estimados del kit piloto.</p>
             </div>
             <div class="calc-card">
                 <div class="calc-inputs">
                     <label for="cantidadKits">Cantidad de Kits a Producir / Vender:</label>
-                    <input type="range" id="cantidadKits" min="10" max="200" value="50" step="10">
+                    <input type="range" id="cantidadKits" min="10" max="200" value="50" step="5">
                     <span id="valorCantidad" class="range-value">50 kits</span>
                 </div>
                 <div class="calc-results">
@@ -204,21 +193,21 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-full">Unirme al Piloto EcoKit</button>
             </form>
-            <div id="formMessage" class="form-message hidden">¡Gracias por registrarte! Pronto nos pondremos en contacto contigo.</div>
+            <div id="formMessage" class="form-message hidden">¡Gracias por registrarte! Tu correo ha sido guardado correctamente en la base de datos.</div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer con Enlaces a GitHub y LinkedIn -->
     <footer class="footer">
         <div class="container footer-content">
             <p>&copy; 2026 EcoKit Universitario - Proyecto Académico UPN. Diseñado con propósito sostenible.</p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/angelcaldasdev" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="funciones.js"></script>
 </body>
 </html>

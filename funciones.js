@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.display = 'flex';
                 navLinks.style.flexDirection = 'column';
                 navLinks.style.position = 'absolute';
-                navLinks.style.top = '70px';
+                navLinks.style.top = '80px';
                 navLinks.style.left = '0';
                 navLinks.style.width = '100%';
                 navLinks.style.backgroundColor = '#ffffff';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Simulador Económico / Calculadora de Viabilidad
+    // Simulador Económico / Calculadora Interactiva en Tiempo Real
     const rangeInput = document.getElementById('cantidadKits');
     const valorCantidad = document.getElementById('valorCantidad');
     const resIngresos = document.getElementById('resIngresos');
@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const resMargen = document.getElementById('resMargen');
 
     if (rangeInput) {
-        rangeInput.addEventListener('input', (e) => {
-            const cantidad = parseInt(e.target.value);
+        // Función para actualizar los cálculos al mover el slider
+        const actualizarCalculadora = () => {
+            const cantidad = parseInt(rangeInput.value);
             const precioVenta = 29.00;
             const costoVariable = 19.00;
             
@@ -39,10 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const margen = ingresos - costos;
 
             valorCantidad.textContent = `${cantidad} kits`;
-            resIngresos.textContent = `S/ ${ingresos.toLocaleString('es-PE', {minimumFractionDigits: 2})}`;
-            resCostos.textContent = `S/ ${costos.toLocaleString('es-PE', {minimumFractionDigits: 2})}`;
-            resMargen.textContent = `S/ ${margen.toLocaleString('es-PE', {minimumFractionDigits: 2})}`;
-        });
+            resIngresos.textContent = `S/ ${ingresos.toLocaleString('es-PE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            resCostos.textContent = `S/ ${costos.toLocaleString('es-PE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            resMargen.textContent = `S/ ${margen.toLocaleString('es-PE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        };
+
+        // Escuchar eventos en tiempo real
+        rangeInput.addEventListener('input', actualizarCalculadora);
+        rangeInput.addEventListener('change', actualizarCalculadora);
+        
+        // Ejecutar al iniciar
+        actualizarCalculadora();
     }
 
     // Manejo del formulario de inscripción al piloto
@@ -53,13 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         pilotForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Simulación de envío exitoso
+            // Simulación de envío exitoso y guardado
             pilotForm.reset();
             formMessage.classList.remove('hidden');
 
             setTimeout(() => {
                 formMessage.classList.add('hidden');
-            }, 5000);
+            }, 6000);
         });
     }
 });
