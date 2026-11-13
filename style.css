@@ -634,3 +634,185 @@ h1, h2, h3, h4 {
     border-bottom: 3px solid var(--primary-color);
     padding-bottom: 4px;
 }
+
+/* ==========================================================
+   NUEVO 3: SECCIÓN DIAGNÓSTICO CON DISEÑO DE IMPACTO
+   ========================================================== */
+
+/* Fondo verde oscuro de toda la sección */
+.seccion-diagnostico {
+    background-color: #064e3b;
+}
+
+/* Encabezado */
+.diag-encabezado {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.diag-etiqueta {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba(167, 243, 208, 0.18);
+    color: #a7f3d0;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.diag-encabezado h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.diag-encabezado p {
+    color: #a7f3d0;
+    font-size: 1.05rem;
+}
+
+/* Rejilla de 4 tarjetas */
+.diag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+/* Tarjeta translúcida */
+.diag-tarjeta {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: var(--transition);
+}
+
+.diag-tarjeta:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Ícono dentro de un círculo verde */
+.diag-icono {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+}
+
+/* Número grande */
+.diag-numero {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.diag-unidad {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a7f3d0;
+}
+
+.diag-titulo {
+    font-size: 1.1rem;
+    color: #a7f3d0;
+    margin: 4px 0 14px;
+}
+
+/* Barra de progreso */
+.diag-barra {
+    position: relative;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.18);
+    margin-bottom: 26px;
+}
+
+.diag-relleno {
+    height: 100%;
+    width: 0;                      /* JavaScript la llena con la animación */
+    border-radius: 4px;
+    background-color: #fbbf24;     /* Ámbar: indica un problema por resolver */
+    transition: width 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Marca de la meta del 40% en la barra de Segregación */
+.diag-marca-meta {
+    position: absolute;
+    left: 40%;
+    top: -5px;
+    width: 2px;
+    height: 18px;
+    background-color: #ffffff;
+}
+
+.diag-marca-texto {
+    position: absolute;
+    left: 40%;
+    top: 16px;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.diag-texto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d1fae5;
+}
+
+/* Etiquetas de Economía Circular */
+.diag-etiquetas {
+    margin-bottom: 18px;
+}
+
+.diag-pastilla {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 14px;
+    background-color: rgba(167, 243, 208, 0.18);
+    color: #d1fae5;
+    margin: 0 6px 6px 0;
+}
+
+/* Tarjeta destacada (Metas del Piloto) en colores claros */
+.diag-tarjeta-destacada {
+    background: #ecfdf5;
+    border-color: #6ee7b7;
+}
+
+.diag-tarjeta-destacada:hover {
+    background: #ffffff;
+}
+
+.diag-tarjeta-destacada .diag-numero {
+    color: #064e3b;
+}
+
+.diag-tarjeta-destacada .diag-unidad,
+.diag-tarjeta-destacada .diag-titulo {
+    color: var(--primary-dark);
+}
+
+.diag-meta-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #a7f3d0;
+    color: #065f46;
+    font-size: 0.95rem;
+}

@@ -65,34 +65,65 @@
         </div>
     </section>
 
-    <!-- Sección Diagnóstico (VISTA: Diagnóstico) -->
-    <section id="diagnostico" class="section bg-light vista">
+       <!-- Sección Diagnóstico (VISTA: Diagnóstico) con diseño de impacto -->
+    <section id="diagnostico" class="section seccion-diagnostico vista">
         <div class="container">
-            <div class="section-title">
+
+            <!-- Encabezado -->
+            <div class="diag-encabezado">
+                <span class="diag-etiqueta">Datos reales del campus</span>
                 <h2>Diagnóstico Socioambiental</h2>
                 <p>Basado en datos reales del campus universitario para dimensionar el impacto actual.</p>
             </div>
-            <div class="grid-4">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-bottle-water"></i></div>
-                    <h3>Descartables</h3>
-                    <p>El 74% de los estudiantes encuestados utiliza botellas, vasos y bolsas de un solo uso diariamente.</p>
+
+            <div class="diag-grid">
+
+                <!-- Tarjeta 1: Descartables -->
+                <div class="diag-tarjeta">
+                    <div class="diag-icono"><i class="fa-solid fa-bottle-water"></i></div>
+                    <div class="diag-numero"><span data-contar="74" data-sufijo="%">74%</span></div>
+                    <h3 class="diag-titulo">Descartables</h3>
+                    <div class="diag-barra">
+                        <div class="diag-relleno" data-ancho="74"></div>
+                    </div>
+                    <p class="diag-texto">El 74% de los estudiantes encuestados utiliza botellas, vasos y bolsas de un solo uso diariamente.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-recycle"></i></div>
-                    <h3>Segregación</h3>
-                    <p>Solo el 27% separa adecuadamente sus residuos, evidenciando una brecha en infraestructura y educación.</p>
+
+                <!-- Tarjeta 2: Segregación (con marca de la meta del 40%) -->
+                <div class="diag-tarjeta">
+                    <div class="diag-icono"><i class="fa-solid fa-recycle"></i></div>
+                    <div class="diag-numero"><span data-contar="27" data-sufijo="%">27%</span></div>
+                    <h3 class="diag-titulo">Segregación</h3>
+                    <div class="diag-barra">
+                        <div class="diag-relleno" data-ancho="27"></div>
+                        <div class="diag-marca-meta"></div>
+                        <span class="diag-marca-texto">meta 40%</span>
+                    </div>
+                    <p class="diag-texto">Solo el 27% separa adecuadamente sus residuos, evidenciando una brecha en infraestructura y educación.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <h3>Economía Circular</h3>
-                    <p>Impulsamos la transición hacia el 2030 promoviendo la reutilización, reparación y reducción de desechos.</p>
+
+                <!-- Tarjeta 3: Economía Circular -->
+                <div class="diag-tarjeta">
+                    <div class="diag-icono"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="diag-numero">2030</div>
+                    <h3 class="diag-titulo">Economía Circular</h3>
+                    <div class="diag-etiquetas">
+                        <span class="diag-pastilla">Reutilizar</span>
+                        <span class="diag-pastilla">Reparar</span>
+                        <span class="diag-pastilla">Reducir</span>
+                    </div>
+                    <p class="diag-texto">Impulsamos la transición hacia el 2030 promoviendo la reutilización, reparación y reducción de desechos.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
-                    <h3>Metas del Piloto</h3>
-                    <p>Elevar la segregación al 40% y reducir un 10% el uso de descartables mediante un plan de 12 semanas.</p>
+
+                <!-- Tarjeta 4: Metas del Piloto (destacada) -->
+                <div class="diag-tarjeta diag-tarjeta-destacada">
+                    <div class="diag-icono"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="diag-numero">12 <span class="diag-unidad">semanas</span></div>
+                    <h3 class="diag-titulo">Metas del Piloto</h3>
+                    <div class="diag-meta-fila"><span>Segregación</span><strong>27% → 40%</strong></div>
+                    <div class="diag-meta-fila"><span>Descartables</span><strong>−10%</strong></div>
                 </div>
+
             </div>
         </div>
     </section>
