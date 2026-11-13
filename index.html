@@ -36,36 +36,53 @@
         </div>
     </header>
 
-    <!-- Sección Hero (VISTA: Inicio) -->
+    <!-- Sección Hero (VISTA: Inicio) con diseño de impacto -->
     <section id="inicio" class="hero vista">
         <div class="container hero-content">
+
             <div class="hero-text">
-                <span class="badge">Innovación y Emprendimiento UPN</span>
-                <h1>Transformando el campus con propósito sostenible</h1>
+                <span class="badge"><i class="fa-solid fa-leaf"></i> Innovación y Emprendimiento UPN</span>
+                <h1>Transformando el campus con <span class="resaltado">propósito sostenible</span></h1>
                 <p>Una iniciativa orientada a reducir el consumo de productos descartables, fomentar la economía circular y potenciar hábitos responsables en la comunidad universitaria.</p>
                 <div class="hero-buttons">
                     <a href="#kit" class="btn btn-primary">Conoce el Kit <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="#diagnostico" class="btn btn-secondary">Ver Diagnóstico</a>
                 </div>
+                <div class="hero-pastillas">
+                    <span class="hero-pastilla"><i class="fa-solid fa-recycle"></i> Reutilizar</span>
+                    <span class="hero-pastilla"><i class="fa-solid fa-screwdriver-wrench"></i> Reparar</span>
+                    <span class="hero-pastilla"><i class="fa-solid fa-arrow-trend-down"></i> Reducir</span>
+                </div>
             </div>
+
             <div class="hero-card">
-                <div class="stat-box">
-                    <h3>480 kg</h3>
-                    <p>Residuos semanales generados en el campus</p>
+                <div class="hero-stat">
+                    <div class="hero-stat-icono"><i class="fa-solid fa-trash-can"></i></div>
+                    <div>
+                        <div class="hero-stat-numero"><span data-contar="480" data-sufijo=" kg">480 kg</span></div>
+                        <p class="hero-stat-texto">Residuos semanales generados en el campus</p>
+                    </div>
                 </div>
-                <div class="stat-box highlight">
-                    <h3>62%</h3>
-                    <p>Materiales potencialmente reciclables</p>
+                <div class="hero-stat hero-stat-destacada">
+                    <div class="hero-stat-icono"><i class="fa-solid fa-recycle"></i></div>
+                    <div>
+                        <div class="hero-stat-numero"><span data-contar="62" data-sufijo="%">62%</span></div>
+                        <p class="hero-stat-texto">Materiales potencialmente reciclables</p>
+                    </div>
                 </div>
-                <div class="stat-box">
-                    <h3>74%</h3>
-                    <p>Uso diario de productos descartables</p>
+                <div class="hero-stat">
+                    <div class="hero-stat-icono"><i class="fa-solid fa-bottle-water"></i></div>
+                    <div>
+                        <div class="hero-stat-numero"><span data-contar="74" data-sufijo="%">74%</span></div>
+                        <p class="hero-stat-texto">Uso diario de productos descartables</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-       <!-- Sección Diagnóstico (VISTA: Diagnóstico) con diseño de impacto -->
+    <!-- Sección Diagnóstico (VISTA: Diagnóstico) con diseño de impacto -->
     <section id="diagnostico" class="section seccion-diagnostico vista">
         <div class="container">
 
@@ -128,15 +145,18 @@
         </div>
     </section>
 
-    <!-- Sección El Kit (VISTA: El Kit): imágenes propias guardadas en la carpeta "imagenes" -->
-    <section id="kit" class="section vista">
+    <!-- Sección El Kit (VISTA: El Kit) -->
+    <section id="kit" class="section seccion-kit vista">
         <div class="container">
-            <div class="section-title">
+            <div class="sec-encabezado">
+                <span class="sec-etiqueta">4 productos en un solo kit</span>
                 <h2>¿Qué contiene el EcoKit Universitario?</h2>
                 <p>Una solución integral diseñada para acompañar tus actividades académicas diarias.</p>
             </div>
+
             <div class="kit-gallery-grid">
                 <div class="kit-item-card">
+                    <span class="kit-numero">01</span>
                     <img src="imagenes/botella.png" alt="Botella reutilizable del EcoKit">
                     <div class="kit-item-info">
                         <h4>Botella Reutilizable (S/ 10.00)</h4>
@@ -144,6 +164,7 @@
                     </div>
                 </div>
                 <div class="kit-item-card">
+                    <span class="kit-numero">02</span>
                     <img src="imagenes/bolsa.jpg.jfif" alt="Bolsa de tela ecológica del EcoKit">
                     <div class="kit-item-info">
                         <h4>Bolsa de Tela Ecológica (S/ 4.00)</h4>
@@ -151,6 +172,7 @@
                     </div>
                 </div>
                 <div class="kit-item-card">
+                    <span class="kit-numero">03</span>
                     <img src="imagenes/cubiertos.jpg.jfif" alt="Cubiertos reutilizables de acero inoxidable">
                     <div class="kit-item-info">
                         <h4>Cubiertos Reutilizables (S/ 3.00)</h4>
@@ -158,6 +180,7 @@
                     </div>
                 </div>
                 <div class="kit-item-card">
+                    <span class="kit-numero">04</span>
                     <img src="imagenes/guia.jpg.jfif" alt="Guía digital interactiva con código QR">
                     <div class="kit-item-info">
                         <h4>Guía Digital Interactiva (S/ 2.00)</h4>
@@ -165,70 +188,126 @@
                     </div>
                 </div>
             </div>
-            <div class="price-tag-box-centered">
-                <div class="price-info">
-                    <span class="label">Precio Propuesto del Kit:</span>
-                    <span class="value">S/ 29.00</span>
+
+            <!-- Panel de precio con gráfico de composición (el "flex" de cada tramo = soles) -->
+            <div class="kit-precio-panel">
+                <div class="kit-precio-cabecera">
+                    <div class="price-info">
+                        <span class="label">Precio Propuesto del Kit:</span>
+                        <span class="value">S/ 29.00</span>
+                    </div>
+                    <span class="margin-badge">Margen unitario: S/ 10.00</span>
                 </div>
-                <span class="margin-badge">Margen unitario: S/ 10.00</span>
+
+                <p class="kit-precio-titulo">¿Cómo se compone el precio?</p>
+                <div class="kit-pila">
+                    <span class="kit-color-1" style="flex: 10;"></span>
+                    <span class="kit-color-2" style="flex: 4;"></span>
+                    <span class="kit-color-3" style="flex: 3;"></span>
+                    <span class="kit-color-4" style="flex: 2;"></span>
+                    <span class="kit-color-5" style="flex: 10;"></span>
+                </div>
+                <div class="kit-leyenda">
+                    <span><i class="kit-color-1"></i>Botella S/ 10.00</span>
+                    <span><i class="kit-color-2"></i>Bolsa S/ 4.00</span>
+                    <span><i class="kit-color-3"></i>Cubiertos S/ 3.00</span>
+                    <span><i class="kit-color-4"></i>Guía S/ 2.00</span>
+                    <span><i class="kit-color-5"></i>Margen S/ 10.00</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Calculadora (VISTA: Calculadora) / Simulador Económico Interactivo en Tiempo Real -->
-    <section id="calculadora" class="section bg-light vista">
+    <section id="calculadora" class="section seccion-calculadora vista">
         <div class="container">
-            <div class="section-title">
+            <div class="sec-encabezado en-oscuro">
+                <span class="sec-etiqueta">Viabilidad económica</span>
                 <h2>Simulador de Impacto y Viabilidad</h2>
                 <p>Mueve la barra para calcular en tiempo real los ingresos y costos estimados del kit piloto.</p>
             </div>
-            <div class="calc-card">
-                <div class="calc-inputs">
+
+            <div class="calc-panel">
+                <div class="calc-control">
                     <label for="cantidadKits">Cantidad de Kits a Producir / Vender:</label>
                     <input type="range" id="cantidadKits" min="10" max="200" value="50" step="5">
-                    <span id="valorCantidad" class="range-value">50 kits</span>
+                    <div class="calc-escala">
+                        <span>10</span>
+                        <span id="valorCantidad" class="range-value">50 kits</span>
+                        <span>200</span>
+                    </div>
                 </div>
-                <div class="calc-results">
-                    <div class="result-item">
-                        <span>Ingresos Totales Estimados:</span>
+
+                <div class="calc-metricas">
+                    <div class="calc-metrica">
+                        <div class="calc-metrica-icono"><i class="fa-solid fa-sack-dollar"></i></div>
+                        <span class="calc-metrica-etiqueta">Ingresos Totales Estimados:</span>
                         <strong id="resIngresos">S/ 1,450.00</strong>
+                        <div class="calc-barra"><div id="barraIngresos" class="calc-barra-relleno" style="background: #34d399;"></div></div>
                     </div>
-                    <div class="result-item">
-                        <span>Costos Variables Totales (S/ 19 c/u):</span>
+                    <div class="calc-metrica">
+                        <div class="calc-metrica-icono"><i class="fa-solid fa-receipt"></i></div>
+                        <span class="calc-metrica-etiqueta">Costos Variables Totales (S/ 19 c/u):</span>
                         <strong id="resCostos">S/ 950.00</strong>
+                        <div class="calc-barra"><div id="barraCostos" class="calc-barra-relleno" style="background: #fbbf24;"></div></div>
                     </div>
-                    <div class="result-item highlight-result">
-                        <span>Margen de Contribución Total:</span>
+                    <div class="calc-metrica calc-metrica-destacada">
+                        <div class="calc-metrica-icono"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="calc-metrica-etiqueta">Margen de Contribución Total:</span>
                         <strong id="resMargen">S/ 500.00</strong>
+                        <div class="calc-barra"><div id="barraMargen" class="calc-barra-relleno" style="background: #059669;"></div></div>
                     </div>
                 </div>
+
+                <p class="calc-nota">Cada kit vendido deja S/ 10.00 de margen de contribución.</p>
             </div>
         </div>
     </section>
 
     <!-- Sección Contacto / Piloto (VISTA: Únete al Piloto) -->
-    <section id="contacto" class="section vista">
-        <div class="container text-center">
-            <div class="section-title">
-                <h2>Sé parte del cambio universitario</h2>
-                <p>Inscríbete en nuestra fase piloto de 12 semanas y ayúdanos a validar esta gran iniciativa.</p>
+    <section id="contacto" class="section seccion-contacto vista">
+        <div class="container">
+            <div class="contacto-grid">
+
+                <!-- Panel verde con los datos del piloto -->
+                <div class="contacto-info">
+                    <span class="sec-etiqueta">Fase piloto</span>
+                    <h2>Sé parte del cambio universitario</h2>
+                    <p>Inscríbete en nuestra fase piloto de 12 semanas y ayúdanos a validar esta gran iniciativa.</p>
+                    <ul class="contacto-lista">
+                        <li><i class="fa-solid fa-calendar-check"></i><span><strong>12 semanas</strong> de fase piloto en el campus</span></li>
+                        <li><i class="fa-solid fa-recycle"></i><span>Meta de segregación: <strong>27% → 40%</strong></span></li>
+                        <li><i class="fa-solid fa-bottle-water"></i><span>Reducir en <strong>10%</strong> el uso de descartables</span></li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta blanca con el formulario (mismos id de siempre) -->
+                <div class="contacto-tarjeta">
+                    <div class="contacto-form-cabecera">
+                        <div class="contacto-form-icono"><i class="fa-solid fa-user-plus"></i></div>
+                        <h3>Regístrate en el piloto</h3>
+                        <p>Completa tus datos y súmate a la fase piloto de EcoKit.</p>
+                    </div>
+
+                    <form id="pilotForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Correo institucional (@upn.pe)" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="carrera">
+                                <option value="sistemas">Ingeniería de Sistemas Computacionales</option>
+                                <option value="otra">Otra carrera UPN</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Unirme al Piloto EcoKit</button>
+                    </form>
+                    <div id="formMessage" class="form-message hidden">¡Gracias por registrarte! Tu correo ha sido guardado correctamente en la base de datos.</div>
+                </div>
+
             </div>
-            <form id="pilotForm" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="nombre" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Correo institucional (@upn.pe)" required>
-                </div>
-                <div class="form-group">
-                    <select id="carrera">
-                        <option value="sistemas">Ingeniería de Sistemas Computacionales</option>
-                        <option value="otra">Otra carrera UPN</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Unirme al Piloto EcoKit</button>
-            </form>
-            <div id="formMessage" class="form-message hidden">¡Gracias por registrarte! Tu correo ha sido guardado correctamente en la base de datos.</div>
         </div>
     </section>
 
@@ -243,7 +322,7 @@
         </div>
     </footer>
 
-    <!-- NUEVO: Visor de imagen ampliada (lightbox). Está oculto hasta que se hace clic en una imagen del kit -->
+    <!-- Visor de imagen ampliada (lightbox). Está oculto hasta que se hace clic en una imagen del kit -->
     <div id="visorImagen" class="visor-imagen">
         <button id="visorCerrar" class="visor-cerrar" aria-label="Cerrar imagen">&times;</button>
         <img id="visorImg" src="" alt="">
