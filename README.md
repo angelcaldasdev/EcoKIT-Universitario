@@ -630,10 +630,9 @@ Actualmente enfocado en fortalecer mis conocimientos en Java, Spring Boot, Angul
 
 ### 🔗 Conecta conmigo
 
-- 💼 **LinkedIn:** [Mi perfil profesional](https://https://www.linkedin.com/in/angel-rafael-caldas-ocm%C3%ADn-930b1a151/)
+- 💼 **LinkedIn:** [AngelCaldasLinkedIn](https://www.linkedin.com/in/angel-rafael-caldas-ocmin-930b1a151/)
 - 🐙 **GitHub:** [angelcaldasdev](https://github.com/angelcaldasdev)
 - 🌐 **Proyecto:** [EcoKit Universitario](https://angelcaldasdev.github.io/EcoKIT-Universitario/)
-
 ---
 
 🌱 **Pequeñas acciones, grandes cambios. La sostenibilidad también se construye desde la tecnología.**
