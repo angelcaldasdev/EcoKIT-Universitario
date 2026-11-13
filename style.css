@@ -315,11 +315,8 @@ h1, h2, h3, h4 {
 
 .kit-item-card img {
     width: 100%;
-    height: 220px;              /* Altura igual para las 4 tarjetas */
-    object-fit: contain;        /* Muestra el producto completo, sin cortarlo */
-    background-color: #f9fafb;  /* Fondo suave para los espacios laterales */
-    padding: 10px;
-    display: block;
+    height: 180px;
+    object-fit: cover;
 }
 
 .kit-item-info {
