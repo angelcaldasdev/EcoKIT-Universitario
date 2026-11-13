@@ -313,10 +313,14 @@ h1, h2, h3, h4 {
     box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
+/* ÚNICO CAMBIO: imágenes más altas (antes 180px) para que se vea
+   completa la botella, el celular y la bolsa */
 .kit-item-card img {
     width: 100%;
-    height: 180px;
+    height: 285px;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .kit-item-info {
@@ -522,4 +526,111 @@ h1, h2, h3, h4 {
         flex-direction: column;
         gap: 15px;
     }
+}
+
+/* ==========================================================
+   NUEVO 1: VISOR DE IMAGEN AMPLIADA (LIGHTBOX / ZOOM)
+   ========================================================== */
+
+/* La lupa indica que la imagen se puede ampliar */
+.kit-item-card img {
+    cursor: zoom-in;
+}
+
+/* Fondo oscuro que cubre toda la pantalla (oculto por defecto) */
+.visor-imagen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    z-index: 2000;               /* Por encima del menú (que tiene 1000) */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cuando JavaScript le agrega esta clase, se muestra */
+.visor-imagen.visor-activo {
+    display: flex;
+    animation: aparecerVisor 0.25s ease;
+}
+
+/* Imagen ampliada: se ve COMPLETA, sin recortes */
+.visor-imagen img {
+    max-width: 92vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.visor-titulo {
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.visor-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.8rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.visor-cerrar:hover {
+    color: var(--primary-light);
+    transform: scale(1.1);
+}
+
+@keyframes aparecerVisor {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ==========================================================
+   NUEVO 2: VISTAS A PANTALLA COMPLETA (una "página" a la vez)
+   ========================================================== */
+
+/* Cada vista ocupa como mínimo toda la pantalla (100vh) */
+.vista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.vista > .container {
+    width: 100%;
+}
+
+/* Las secciones normales dejan espacio para el menú fijo de arriba */
+.section.vista {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+/* JavaScript agrega esta clase a las vistas que NO están activas */
+.vista.vista-oculta {
+    display: none;
+}
+
+/* Marca la opción del menú donde estás */
+.nav-item-green.activo {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 4px;
 }

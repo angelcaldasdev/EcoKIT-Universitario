@@ -36,8 +36,8 @@
         </div>
     </header>
 
-    <!-- Sección Hero -->
-    <section id="inicio" class="hero">
+    <!-- Sección Hero (VISTA: Inicio) -->
+    <section id="inicio" class="hero vista">
         <div class="container hero-content">
             <div class="hero-text">
                 <span class="badge">Innovación y Emprendimiento UPN</span>
@@ -65,8 +65,8 @@
         </div>
     </section>
 
-    <!-- Sección Diagnóstico -->
-    <section id="diagnostico" class="section bg-light">
+    <!-- Sección Diagnóstico (VISTA: Diagnóstico) -->
+    <section id="diagnostico" class="section bg-light vista">
         <div class="container">
             <div class="section-title">
                 <h2>Diagnóstico Socioambiental</h2>
@@ -97,8 +97,8 @@
         </div>
     </section>
 
-    <!-- Sección El Kit: imágenes propias guardadas en la carpeta "imagenes" -->
-    <section id="kit" class="section">
+    <!-- Sección El Kit (VISTA: El Kit): imágenes propias guardadas en la carpeta "imagenes" -->
+    <section id="kit" class="section vista">
         <div class="container">
             <div class="section-title">
                 <h2>¿Qué contiene el EcoKit Universitario?</h2>
@@ -144,8 +144,8 @@
         </div>
     </section>
 
-    <!-- Sección Calculadora / Simulador Económico Interactivo en Tiempo Real -->
-    <section id="calculadora" class="section bg-light">
+    <!-- Sección Calculadora (VISTA: Calculadora) / Simulador Económico Interactivo en Tiempo Real -->
+    <section id="calculadora" class="section bg-light vista">
         <div class="container">
             <div class="section-title">
                 <h2>Simulador de Impacto y Viabilidad</h2>
@@ -175,8 +175,8 @@
         </div>
     </section>
 
-    <!-- Sección Contacto / Piloto -->
-    <section id="contacto" class="section">
+    <!-- Sección Contacto / Piloto (VISTA: Únete al Piloto) -->
+    <section id="contacto" class="section vista">
         <div class="container text-center">
             <div class="section-title">
                 <h2>Sé parte del cambio universitario</h2>
@@ -211,6 +211,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- NUEVO: Visor de imagen ampliada (lightbox). Está oculto hasta que se hace clic en una imagen del kit -->
+    <div id="visorImagen" class="visor-imagen">
+        <button id="visorCerrar" class="visor-cerrar" aria-label="Cerrar imagen">&times;</button>
+        <img id="visorImg" src="" alt="">
+        <p id="visorTitulo" class="visor-titulo"></p>
+    </div>
 
     <script src="funciones.js"></script>
 </body>
